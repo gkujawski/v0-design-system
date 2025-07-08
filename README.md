@@ -1,4 +1,8 @@
+# v0 Design System
+
 A foundational design system for teaching purposes, aimed at creating consistent, accessible, and efficient user interfaces. This system provides a single source of truth for design decisions, enabling faster development and a cohesive brand experience.
+
+
 ✨ Purpose
 
 This Design System serves to:
@@ -14,26 +18,32 @@ This Design System serves to:
 🚀 Getting Started
 
 To use this Design System in your project, follow these steps:
+
 1. Installation
 
 You can install the design system components and tokens as a package (if published) or directly integrate them into your project.
 
 If published as an npm package:
 
+```
 npm install @your-org/design-system
 # or
 yarn add @your-org/design-system
 # or
 pnpm add @your-org/design-system
+```
 
 If integrating directly (e.g., for monorepos):
 
-You'll typically import components and tokens from the src directory.
+You'll typically import components and tokens from the `src` directory.
+
 2. Usage
-Using Components
+
+*Using Components
 
 Import components into your React (or other framework) files:
 
+```
 import { Button, Card } from '@your-org/design-system'; // If published
 // OR
 import { Button } from './src/components/Button'; // If direct import
@@ -47,6 +57,7 @@ function MyComponent() {
     </Card>
   );
 }
+```
 
 Using Design Tokens
 
@@ -54,6 +65,7 @@ You can access design tokens (colors, spacing, typography) through CSS variables
 
 Example (CSS Variables):
 
+```
 :root {
   --color-primary-500: #1a73e8;
   --spacing-md: 16px;
@@ -63,19 +75,23 @@ Example (CSS Variables):
   background-color: var(--color-primary-500);
   padding: var(--spacing-md);
 }
+```
 
 Example (JavaScript):
 
+```
 import tokens from '@your-org/design-system/tokens'; // If published
 // OR
 import tokens from './src/tokens'; // If direct import
 
 console.log(tokens.colors.primary[500]); // #1a73e8
+```
 
 📂 Project Structure
 
 This repository is organized as follows:
 
+```
 my-design-system/
 ├── .github/              # GitHub Actions workflows (e.g., CI/CD)
 ├── src/                  # Core source code of the design system
@@ -90,6 +106,7 @@ my-design-system/
 ├── tailwind.config.js    # Tailwind CSS configuration
 ├── tsconfig.json         # TypeScript configuration
 └── README.md             # This file
+```
 
 🎨 V0 Integration Notes
 
