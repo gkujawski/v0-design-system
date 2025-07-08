@@ -2,24 +2,23 @@
 
 A foundational design system for teaching purposes, aimed at creating consistent, accessible, and efficient user interfaces. This system provides a single source of truth for design decisions, enabling faster development and a cohesive brand experience.
 
-
-✨ Purpose
+# ✨ Purpose
 
 This Design System serves to:
 
-    Ensure Consistency: Provide a unified visual language and interaction patterns across all products and platforms.
+* Ensure Consistency: Provide a unified visual language and interaction patterns across all products and platforms.
 
-    Accelerate Development: Offer reusable components and clear guidelines to speed up UI development.
+* Accelerate Development: Offer reusable components and clear guidelines to speed up UI development.
 
-    Improve Quality: Promote best practices for accessibility, performance, and maintainability.
+* Improve Quality: Promote best practices for accessibility, performance, and maintainability.
 
-    Foster Collaboration: Bridge the gap between design and development teams with shared resources and documentation.
+* Foster Collaboration: Bridge the gap between design and development teams with shared resources and documentation.
 
-🚀 Getting Started
+# 🚀 Getting Started
 
 To use this Design System in your project, follow these steps:
 
-1. Installation
+**1. Installation**
 
 You can install the design system components and tokens as a package (if published) or directly integrate them into your project.
 
@@ -37,9 +36,9 @@ If integrating directly (e.g., for monorepos):
 
 You'll typically import components and tokens from the `src` directory.
 
-2. Usage
+**2. Usage**
 
-*Using Components
+**Using Components**
 
 Import components into your React (or other framework) files:
 
@@ -59,7 +58,7 @@ function MyComponent() {
 }
 ```
 
-Using Design Tokens
+**Using Design Tokens**
 
 You can access design tokens (colors, spacing, typography) through CSS variables, JavaScript objects, or other formats generated from the tokens directory.
 
@@ -77,7 +76,7 @@ Example (CSS Variables):
 }
 ```
 
-Example (JavaScript):
+**Example (JavaScript)**:
 
 ```
 import tokens from '@your-org/design-system/tokens'; // If published
@@ -87,7 +86,7 @@ import tokens from './src/tokens'; // If direct import
 console.log(tokens.colors.primary[500]); // #1a73e8
 ```
 
-📂 Project Structure
+# 📂 Project Structure
 
 This repository is organized as follows:
 
@@ -108,31 +107,30 @@ my-design-system/
 └── README.md             # This file
 ```
 
-🎨 V0 Integration Notes
+# 🎨 V0 Integration Notes
 
 This design system structure is designed to be flexible. The initial design elements and components for this system were generated using V0.
 
-To integrate your V0-generated code:
+**To integrate your V0-generated code**:
 
-    Extract V0 Code: From your V0 chat session ([Link to V0 design: https://v0.dev/chat/update-design-tokens-cfdhvoANDIW - Note: I cannot directly access or parse content from this link, so you'll need to manually copy the code from your V0 session.]), copy the generated HTML, CSS, and JavaScript/React code.
+1. **Extract V0 Code**: From our V0 chat [session](https://v0.dev/chat/update-design-tokens-cfdhvoANDIW), copy the generated HTML, CSS, and JavaScript/React code.
 
-    Place Tokens:
+2. **Place Tokens**: If V0 provided specific token values (e.g., color hex codes, spacing units), integrate them into the `src/tokens/` directory. You might create `colors.json`, `spacing.json`, etc., based on V0's output.
 
-        If V0 provided specific token values (e.g., color hex codes, spacing units), integrate them into the src/tokens/ directory. You might create colors.json, spacing.json, etc., based on V0's output.
+3. **Place Components**:
 
-    Place Components:
+* For each component V0 generated (e.g., a Button, a Card), create a new sub-directory under `src/components/` (e.g., `src/components/Button/`).
 
-        For each component V0 generated (e.g., a Button, a Card), create a new sub-directory under src/components/ (e.g., src/components/Button/).
+* Place the component's code (e.g., Button.jsx) and its associated styles (e.g., Button.module.css or Tailwind classes directly in JSX) within that directory.
 
-        Place the component's code (e.g., Button.jsx) and its associated styles (e.g., Button.module.css or Tailwind classes directly in JSX) within that directory.
+4. **Update Exports**: Ensure your `src/components/index.js` and `src/tokens/index.js` files correctly export the new components and tokens you've added.
 
-    Update Exports: Ensure your src/components/index.js and src/tokens/index.js files correctly export the new components and tokens you've added.
+5. **Refine & Document**: Review the V0-generated code for best practices and integrate it seamlessly with the rest of your design system. Crucially, document each component in the `docs/components/` directory, explaining its purpose, props, and examples.
 
-    Refine & Document: Review the V0-generated code for best practices and integrate it seamlessly with the rest of your design system. Crucially, document each component in the docs/components/ directory, explaining its purpose, props, and examples.
-
-🤝 Contributing
+# 🤝 Contributing
 
 We welcome contributions to this Design System! Please see our CONTRIBUTING.md for guidelines on how to get started, report issues, and propose changes.
-📄 License
+
+# 📄 License
 
 This Design System is open-source and licensed under the MIT License.
